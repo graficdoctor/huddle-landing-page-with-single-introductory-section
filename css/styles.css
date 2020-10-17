@@ -1,0 +1,242 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+/* Variables */
+:root {
+  --clr-primary-1: hsl(257, 40%, 49%);
+  --clr-primary-2: hsl(257, 40%, 85%);
+  --clr-primary-3: hsl(257, 39%, 25%);
+  --ff-headers: 'Poppins', sans-serif;
+  --ff-body: 'Open Sans', sans-serif;
+  --lineheight: 1.5;
+  --light-shadow: 15px 20px 30px -16px rgba(0, 0, 0, 0.75);
+  --dark-shadow: 20px 25px 35px -16px rgba(0, 0, 0, 0.75);
+  --radius: 3rem;
+  --spacing: 0.05rem;
+  --transition: all 0.4s linear;
+  --max-width: 1170px;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url('../images/bg-mobile.svg') no-repeat;
+  background-size: contain;
+  background-color: var(--clr-primary-1);
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-family: var(--ff-headers);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: var(--spacing);
+  line-height: var(--lineheight);
+  margin-bottom: 0.7rem;
+}
+
+p {
+  font-family: var(--ff-body);
+  line-height: var(--lineheight);
+  margin-bottom: 0.7rem;
+}
+
+/* Global Classes */
+.main {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+.navbar {
+  height: 4rem;
+  padding: 1rem;
+}
+
+.logo {
+  width: 8rem;
+}
+
+/* Image Container */
+.img {
+  width: 100%;
+}
+
+.image-container {
+  margin-bottom: 1rem;
+}
+
+/* Text Container */
+.text-container {
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  background: white;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  color: var(--clr-primary-1);
+  cursor: pointer;
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+  transition: var(--transition);
+  width: 50vw;
+}
+
+.btn:hover {
+  box-shadow: var(--light-shadow);
+  background-color: var(--clr-primary-3);
+  color: white;
+  transition: var(--transition);
+}
+
+.btn:active {
+  background-color: white;
+  box-shadow: var(--dark-shadow);
+  color: var(--clr-primary-3);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.social-icon {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  color: white;
+  text-align: center;
+  transition: var(--transition);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid white;
+  margin-right: 1rem;
+}
+
+.social-icon:hover {
+  color: var(--clr-primary-2);
+}
+
+.fab {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  translate: -15% -15%;
+}
+
+.fa-facebook-f {
+  position: absolute;
+  left: 35%;
+}
+
+.fa-instagram {
+  position: absolute;
+  left: 33%;
+  margin-right: 0;
+}
+
+/* Front End Mentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Media Query */
+@media screen and (min-width: 550px) {
+  .btn {
+    width: 200px;
+  }
+  html {
+    background: url('../images/bg-desktop.svg') no-repeat center center fixed;
+    background-color: var(--clr-primary-1);
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 1170px;
+    height: 100vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    /* max-height: 70vh; */
+  }
+  p {
+    font-weight: 300;
+    text-align: left;
+    margin-top: 2rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .image-container {
+    flex: 55%;
+    justify-items: start;
+    margin-right: 4rem;
+  }
+  .text-container {
+    flex: 45%;
+    justify-items: start;
+    margin-top: 2rem;
+  }
+  .navbar {
+    height: 7rem;
+    margin-top: 4rem;
+  }
+  .logo {
+    width: 12.5rem;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+  }
+  .register {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
